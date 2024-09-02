@@ -1,2 +1,2 @@
-# codebuild-for-lambda
-This Repository contains the codes for CodeBuild project.
+# code-deploy-udemy
+This repository contains all the resources used in the Udemy course.
