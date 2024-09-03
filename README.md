@@ -1,2 +1,2 @@
-# code-deploy-udemy
-This repository contains all the resources used in the Udemy course.
+# codedeploy-to-ec2-nodejs
+Deploy the Nodejs application to EC2 Instance using CodeDeploy
