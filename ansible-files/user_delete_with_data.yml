@@ -1,0 +1,25 @@
+---
+
+- name: "User Managment"
+  hosts: all
+
+  tasks:
+  - name: "User Creation"
+    user:
+      name: sanjana
+      password: $6$.AGrJSVcVpUN0fUp$ojU7O41sXvDKLy9tL5V.ulNXk28CcvJ8F/Lrcc3LGdTlGS4psaHBl.mxPz.Z7ibuk5FlflmN8Jkekoe.oy2JK/
+      comment: user adding for developer
+      shell: /bin/bash
+      groups: dvlp,sanjana
+      state: absent
+      remove: yes
+
+
+#############################################################################################
+#
+#
+#Make user with password
+#
+#install whois //// apt install whois
+#
+#generate hash password for user in ansible /////  mkpasswd --method=SHA-512

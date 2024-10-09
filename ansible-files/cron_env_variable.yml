@@ -1,0 +1,13 @@
+---
+
+- name: "Add Enviornment Variable"
+  hosts: all
+
+  tasks:
+  - name: "Environment Variable"
+    cron:
+      name: PATH
+      env: yes
+      user: soni
+      job: /tmp/script/
+

@@ -1,0 +1,13 @@
+---
+
+- name: "Cron Modified"
+  hosts: all
+
+
+  tasks:
+  - name: "Remove Cron"
+    cron:
+      name: Run Cron Script
+      state: absent
+      user: soni
+

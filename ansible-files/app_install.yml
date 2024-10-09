@@ -1,0 +1,16 @@
+---
+
+- name: "Installing the Apache Web Server & Start the Server"
+  hosts: localhost
+
+  tasks:
+  - name: "Installing the apache"
+    apt:
+      name: apache2
+      state: present
+  - name: "Start the web server"
+    service:
+      name: apache2
+      state: started
+      enabled: true
+

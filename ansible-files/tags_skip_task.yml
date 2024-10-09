@@ -1,0 +1,22 @@
+---
+
+- name: "Tags Verfiy"
+  hosts: all
+
+
+  tasks:
+  - name: "Installing php"
+    apt:
+      name: php7.2-fpm
+      state: present
+
+    tags: i-php-fpm
+
+  - name: "Starated the mysql service"
+    service:
+      name: php7.2-fpm
+      state: started
+      enabled: true
+
+    tags: ss-php
+

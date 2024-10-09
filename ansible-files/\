@@ -1,0 +1,13 @@
+---
+- name: "Transfer files from host to remote"
+  hosts: all
+
+  tasks:
+  - name: "Copies files"
+    copy:
+      src: /root/file.txt
+      dest: /tmp/
+      owner: soni
+      mode: ugo=rx
+      backup: true
+

@@ -1,0 +1,14 @@
+---
+
+- name: "Add Enviornment Variable"
+  hosts: all
+
+  tasks:
+  - name: "Environment Variable"
+    cron:
+      name: VARR
+      env: yes
+      user: soni
+      job: /tmp/script/test.sh
+      insertafter: PATH
+

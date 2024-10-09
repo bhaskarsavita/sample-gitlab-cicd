@@ -1,0 +1,19 @@
+---
+
+- name: "Firewall Change"
+  hosts: all
+
+  tasks:
+  - name: "Enabled a service in firewall"
+    firewalld:
+      port: 80/tcp
+      permanent: true
+      state: enabled
+    notify:
+      - Reload the firewall
+  
+  handlers:
+  - name: "Reload the firewall"
+    service:
+      name: firewalld
+      state: reloaded

@@ -1,0 +1,14 @@
+---
+
+- name: "Run Multiple Command at a same time"
+  hosts: all
+  vars:
+    - apps: [apt,telnet,vim,git,openssh-server]
+
+  tasks:
+  - name: "Installing Apache2"
+    apt:
+      name: "{{ item }}"
+      state: present
+    tags: i-apache2
+    with_items: "{{ apps }}"

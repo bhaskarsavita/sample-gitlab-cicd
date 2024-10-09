@@ -1,0 +1,19 @@
+---
+
+- name: "Cron Setup"
+  hosts: all
+
+
+  tasks:
+  - name: "Add Cron Job"
+    cron:
+      name: "Run Cron Script"
+      minute: 30
+      hour: 19
+      day: 14
+      month: "*"
+      weekday: "*"
+      user: soni
+      job: /tmp/script/test.sh
+      disabled: yes
+

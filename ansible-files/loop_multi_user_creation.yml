@@ -1,0 +1,19 @@
+---
+
+- name: "Multiple User Creation"
+  hosts: all
+
+  tasks:
+  - name: "User Creation"
+    user:
+      name: "{{ item }}"
+      comment: For testing purpose
+      shell: /bin/bash
+
+    loop:
+      - Charu
+      - Shivam
+      - Sachin
+      - Abhishek
+      - Bhaskar
+

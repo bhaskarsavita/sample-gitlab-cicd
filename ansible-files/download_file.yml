@@ -1,0 +1,13 @@
+---
+
+- name: "Download File from the internet"
+  hosts: all
+
+  tasks:
+  - name: "Download python link"
+    get_url:
+      url: https://www.python.org/ftp/python/3.12.4/Python-3.12.4.tar.xz
+      dest: /tmp/script/
+      owner: soni
+      group: soni
+      mode: u=rw,g=rw,o=r

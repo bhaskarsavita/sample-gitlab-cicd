@@ -1,0 +1,16 @@
+---
+
+- name: "Install Apache on Remote Server"
+  hosts: all
+
+  tasks:
+  - name: "Installing the apache webserver"
+    apt:
+      name: apache2
+      state: present
+  - name: "Start the web server"
+    service:
+      name: apache2
+      state: started
+      enabled: true
+

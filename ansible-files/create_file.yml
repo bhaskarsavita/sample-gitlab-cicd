@@ -1,0 +1,21 @@
+---
+
+- name: "File Create"
+  hosts: all
+
+  tasks:
+  - name: "File Creation on remote server"
+    file:
+      path: /tmp/test.txt
+      state: absent
+      owner: ubuntu
+      group: soni
+      mode: u=rw,g=rx,o=r
+
+  - name: Creating a directory
+    file:
+      path: /tmp/myfolder
+      state: absent
+      owner: soni
+      mode: u=x,g=rw,o=rwx
+

@@ -1,0 +1,21 @@
+---
+
+- name: "Set Variable"
+  hosts: all
+  vars:
+    - app: apache2
+
+  tasks:
+  - name: "Inatslling Apache"
+    apt:
+      name: "{{ app }}"
+      state: present
+    tags: i-apache2
+
+  - name: "Started apache service"
+    service:
+      name: "{{ app }}"
+      state: started
+      enabled: true
+    tags: ss-apache2
+
